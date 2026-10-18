@@ -130,8 +130,5 @@ include/deriv/              src/                    one namespace per module
 
 ## References
 
-- M. Capiński and T. Zastawniak, *Numerical Methods in Finance with C++*, Cambridge University Press, 2012. The binomial and Monte Carlo class design follows this book.
-- D. Duffy, *Introduction to C++ for Financial Engineers*, Wiley, 2006. `GeneralizedBlackScholes` is adapted from its `EuropeanOption` class.
-- E. G. Haug, *The Complete Guide to Option Pricing Formulas*, McGraw-Hill, 2007. Source of the generalized Black–Scholes model.
-- J. C. Hull, *Options, Futures, and Other Derivatives*. Source of the worked examples in `black_scholes`.
-- M. Abramowitz and I. Stegun, *Handbook of Mathematical Functions*, §26.2. Source of the normal CDF approximations.
+- Daniel Duffy, *Introduction to C++ for Financial Engineers*. `GeneralizedBlackScholes` is adapted from the book's `EuropeanOption` class ((C) Datasim Component Technology BV 2003-2006).
+- John Hull, *Options, Futures, and Other Derivatives*. Source of the put and cash-dividend examples in `black_scholes`.

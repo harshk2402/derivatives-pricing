@@ -4,7 +4,7 @@ namespace deriv {
 namespace analytic {
 
     // Generalized Black-Scholes model for European calls and puts, with a
-    // cost-of-carry parameter b (Haug):
+    // cost-of-carry parameter b:
     //     b = r        stock without dividends
     //     b = r - q    stock or index paying a continuous dividend yield q
     //     b = 0        option on a futures contract

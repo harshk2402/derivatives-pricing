@@ -45,7 +45,7 @@ The stopping lattice records which term wins. With no dividends an American call
 
 $$C = S_0 N(d_+) - K e^{-rT} N(d_-), \qquad d_\pm = \frac{\ln(S_0/K) + (r \pm \tfrac12\sigma^2)T}{\sigma\sqrt T},$$
 
-with $\Delta = N(d_+)$ and vega $= S_0\,\varphi(d_+)\sqrt T$. `NormalCDF` is the Abramowitz–Stegun approximation 26.2.17, with absolute error below $7.5\times10^{-8}$.
+with $\Delta = N(d_+)$ and vega $= S_0\,\varphi(d_+)\sqrt T$. `NormalCDF` is a five-term polynomial approximation; the `numerical_integration` example compares it with the exact value.
 
 ### Generalized Black–Scholes
 `GeneralizedBlackScholes` adds a cost-of-carry rate $b$:
@@ -63,7 +63,7 @@ Different choices of $b$ cover different underlyings:
 | $0$ | futures (Black's model) |
 | $r - r_f$ | foreign currency |
 
-A known cash dividend $D$ paid at time $t$ is handled by pricing on $S - De^{-rt}$. This class uses a coarser three-term normal approximation (A&S 26.2.16).
+A known cash dividend $D$ paid at time $t$ is handled by pricing on $S - De^{-rt}$. This class uses a coarser three-term polynomial approximation of the normal CDF.
 
 ### Implied volatility
 `ImpliedVolatility` presents $\sigma \mapsto C_{BS}(\sigma)$ as a `numerics::Function`, with vega as its derivative. Newton–Raphson then iterates

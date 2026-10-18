@@ -3,8 +3,7 @@
 namespace deriv {
 namespace analytic {
 
-    // Standard normal cumulative distribution function
-    // (polynomial approximation, Abramowitz & Stegun 26.2.17).
+    // Standard normal cumulative distribution function (polynomial approximation).
     double NormalCDF(double x);
 
     // European call in the Black-Scholes model, closed form.

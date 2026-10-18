@@ -1,9 +1,10 @@
 // Closed-form European option prices.
 //
 // GeneralizedBlackScholes covers stocks, dividend-paying stocks, futures and
-// currencies through the cost-of-carry b. The cases below are textbook
-// examples from Hull, "Options, Futures, and Other Derivatives". A known cash
-// dividend D paid at time t is handled by pricing on S0 - D e^{-r t}.
+// currencies through the cost-of-carry b. The two put examples (with and
+// without a dividend) are from Hull, "Options, Futures, and Other
+// Derivatives". A known cash dividend D paid at time t is handled by pricing
+// on S0 - D e^{-r t}.
 
 #include "deriv/analytic/BlackScholesCall.h"
 #include "deriv/analytic/GeneralizedBlackScholes.h"
